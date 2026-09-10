@@ -20,7 +20,9 @@
 
 ## 🐾 Try a tiny lesson
 
-[Open a Picture Lesson](https://github.com/PaulTiffany/FuzzyCalculus/issues/new?template=picture-lesson.yml) · [Plant a Wonder](https://github.com/PaulTiffany/FuzzyCalculus/issues/new?template=wonder.yml)
+[Open a Picture Lesson](../../issues/new?template=picture-lesson.yml) · [Plant a Wonder](../../issues/new?template=wonder.yml)
+
+Grown-ups with a fork: enable **Issues** in your repository’s **Settings → General → Features** to use these activities in your own copy.
 
 Young children participate through a grown-up. Please never post a child's personal information.
 

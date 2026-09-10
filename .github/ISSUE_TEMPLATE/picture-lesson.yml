@@ -1,5 +1,5 @@
 name: "🐾 Picture lesson"
-description: Look at a page, notice a change, and leave an observer receipt.
+description: Look at a page, notice a change, and share what you saw.
 title: "[Pawprint] "
 body:
   - type: markdown
@@ -38,7 +38,7 @@ body:
     id: confidence
     attributes:
       label: How sure are you?
-      description: This is an observer receipt, not a grade.
+      description: There is no grade. It is okay to be unsure.
       options:
         - "Not sure yet"
         - "A tiny bit"
