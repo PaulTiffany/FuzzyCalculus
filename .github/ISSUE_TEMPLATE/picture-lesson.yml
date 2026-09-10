@@ -1,0 +1,75 @@
+name: "🐾 Picture lesson"
+description: Look at a page, notice a change, and leave an observer receipt.
+title: "[Pawprint] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Sugar Bear has a question
+
+        There may be more than one honest answer. Look first; name the change second.
+
+        **Grown-ups:** Please post for young children. Do not include a child's name, face, location, school, or other personal details.
+  - type: dropdown
+    id: page
+    attributes:
+      label: Which page are you exploring?
+      options:
+        - "1 — How much?"
+        - "2 — Can you see it?"
+        - "3 — What changed?"
+        - "4 — Did the changing change?"
+        - "5 — Does it look smooth from here?"
+        - "6 — What happened in between?"
+        - "7 — Is it still the same bear?"
+        - "8 — Who gets to change the promise?"
+        - "9 — A softer world"
+    validations:
+      required: true
+  - type: textarea
+    id: noticed
+    attributes:
+      label: What did you notice?
+      description: A word, a color, a feeling, a difference, or anything else.
+      placeholder: "I noticed..."
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How sure are you?
+      description: This is an observer receipt, not a grade.
+      options:
+        - "Not sure yet"
+        - "A tiny bit"
+        - "Sort of"
+        - "Very much"
+    validations:
+      required: true
+  - type: textarea
+    id: stayed
+    attributes:
+      label: What stayed the same?
+      placeholder: "Even though something changed..."
+  - type: textarea
+    id: another
+    attributes:
+      label: What might another observer see?
+      placeholder: "Someone looking from somewhere else might..."
+  - type: dropdown
+    id: promise
+    attributes:
+      label: Did a promise change?
+      options:
+        - "No"
+        - "Yes"
+        - "I am not sure"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Gentle posting promise
+      options:
+        - label: "I am an adult or eligible account holder, and I will not post a child's personal information."
+          required: true
