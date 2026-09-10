@@ -1,0 +1,92 @@
+name: Picture Readback
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  readback:
+    name: Check the pawprints
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the proposed story
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build observer receipt
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const cp = require('child_process');
+
+          const base = process.env.BASE_SHA;
+          const head = process.env.HEAD_SHA;
+          const changed = cp.execFileSync(
+            'git',
+            ['diff', '--name-status', base, head],
+            { encoding: 'utf8' }
+          ).trim();
+
+          const pages = fs.readdirSync('.')
+            .filter(name => /^\d\d-.*\.png$/i.test(name))
+            .sort();
+
+          const readme = fs.readFileSync('README.md', 'utf8');
+          const missingAlt = pages.filter(name =>
+            !readme.includes('](' + name + ')')
+          );
+
+          const badPng = [];
+          const dimensions = [];
+          for (const name of pages) {
+            const data = fs.readFileSync(name);
+            const signature = data.subarray(0, 8).toString('hex');
+            if (signature !== '89504e470d0a1a0a' || data.length < 24) {
+              badPng.push(name);
+              continue;
+            }
+            dimensions.push({
+              name,
+              width: data.readUInt32BE(16),
+              height: data.readUInt32BE(20)
+            });
+          }
+
+          const lines = [
+            '# 🐾 Picture Readback',
+            '',
+            'A machine checked structure. It did **not** decide whether the change belongs in the story.',
+            '',
+            '## Changed pawprints',
+            '',
+            '    ' + (changed || 'No file changes found.').replace(/\n/g, '\n    '),
+            '',
+            '## Canonical picture pages',
+            '',
+            ...dimensions.map(p => '- ' + p.name + ': ' + p.width + ' × ' + p.height),
+            '',
+            '- Numbered picture pages: **' + pages.length + '**',
+            '- Pages missing meaningful README alt text: **' + missingAlt.length + '**',
+            '- Invalid PNG files: **' + badPng.length + '**',
+            '',
+            '> Passing this check is evidence, not authority. Human review is still required.'
+          ];
+
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+
+          if (missingAlt.length) {
+            console.error('Missing README alt text:', missingAlt.join(', '));
+            process.exitCode = 1;
+          }
+          if (badPng.length) {
+            console.error('Invalid PNG files:', badPng.join(', '));
+            process.exitCode = 1;
+          }
+          NODE
