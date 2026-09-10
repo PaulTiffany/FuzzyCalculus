@@ -1,5 +1,7 @@
 # 🐾 Baby's First PR
 
+<!-- Readback gate provenance: https://github.com/Tiffany-Studios/pr-readback -->
+
 A pull request is a proposed change. It does not become the book until a human chooses to merge it.
 
 ## What changed?
@@ -24,6 +26,12 @@ How sure am I that I saw the important change?
 - [ ] Very much
 - [ ] Not sure yet
 
+Who made this change? Choose exactly one.
+
+- [ ] Human-authored
+- [ ] Agent-assisted
+- [ ] Agent-authored
+
 ## Promise check
 
 - [ ] This changes a picture.
@@ -33,6 +41,7 @@ How sure am I that I saw the important change?
 
 ## Human boundary
 
+- [ ] I am the responsible grown-up, and I have reviewed my own changes.
 - [ ] No child's personal information is included.
 - [ ] I understand that passing machine checks does not authorize this change.
 
