@@ -1,17 +1,27 @@
 name: Picture Readback
 
+# The human self-review gate comes from Tiffany-Studios/pr-readback.
+# It is pinned for reproducibility; provenance and licence: ../NOTICE.md.
+
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    types: [opened, edited, synchronize, reopened, ready_for_review, converted_to_draft]
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   readback:
     name: Check the pawprints
     runs-on: ubuntu-latest
     steps:
+      - name: Check the grown-up readback promise
+        uses: Tiffany-Studios/pr-readback@1a0d7b05838c3272681dd7afdfc1821732a27140
+        with:
+          review-label: I am the responsible grown-up, and I have reviewed my own changes
+          guidance: Read the Observer readback and Human boundary sections in the pull request template.
+
       - name: Check out the proposed story
         uses: actions/checkout@v4
         with:
