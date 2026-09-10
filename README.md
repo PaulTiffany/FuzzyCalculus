@@ -27,3 +27,5 @@ Young children participate through a grown-up. Please never post a child's perso
 ---
 
 *Sugar Bear's Book of Fuzzy Things* © 2026 **Paul Carver Tiffany III**. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Repository automation and contribution templates are separately [MIT licensed](.github/LICENSE), with their [provenance recorded here](.github/NOTICE.md).
