@@ -1,49 +1,29 @@
-# Fuzzy Calculus
+# Sugar Bear's Book of Fuzzy Things
 
-## Sugar Bear's Book of Soft Edges
+*Little adventures in an in-between world.*
 
-Some things have sharp edges. A cookie cutter does.
+For Yvonne ❤️
 
-Some things have soft edges. A cloud does. A shadow does. A friendship can, too.
+[![Cover — Sugar Bear's Book of Fuzzy Things](00-cover.png)](00-cover.png)
 
-**Fuzzy calculus is a way to talk about things that change when their edges are not perfectly sharp.**
+[![1. How much?](01-how-much.png)](01-how-much.png)
 
-This little book follows Sugar Bear and Yvonne through nine gentle lessons. It uses ordinary words, small numbers, and a great deal of honey.
+[![2. Can you see it?](02-can-you-see-it.png)](02-can-you-see-it.png)
 
-No calculus class is required. If you can count to ten and notice that today can be a little different from yesterday, you are ready.
+[![3. What changed?](03-what-changed.png)](03-what-changed.png)
 
-### Read the book
+[![4. Did the changing change?](04-did-the-changing-change.png)](04-did-the-changing-change.png)
 
-1. [The Edge That Would Not Sit Still](book/01-the-soft-edge.md)
-2. [Two Bears, Two Honest Answers](book/02-two-honest-bears.md)
-3. [The Sugar Scale](book/03-the-sugar-scale.md)
-4. [Footprints of Change](book/04-footprints-of-change.md)
-5. [When Change Changes](book/05-when-change-changes.md)
-6. [Smooth Enough for Whom?](book/06-smooth-enough.md)
-7. [The Boundary Keeps the Receipt](book/07-boundary-receipt.md)
-8. [The Bear Who Forked in Two](book/08-the-forking-bear.md)
-9. [The Honey-Picnic Promise](book/09-the-honey-picnic-promise.md)
+[![5. Does it look smooth from here?](05-does-it-look-smooth-from-here.png)](05-does-it-look-smooth-from-here.png)
 
-Then visit the [tiny glossary](book/glossary.md).
+[![6. What happened in between?](06-what-happened-in-between.png)](06-what-happened-in-between.png)
 
-![Sugar Bear holds a softly glowing cloud while tiny stars and honey drops float nearby.](art/cover.svg)
+[![7. Is it still the same bear?](07-is-it-still-the-same-bear.png)](07-is-it-still-the-same-bear.png)
 
-### A promise to grown-ups
+[![8. Who gets to change the promise?](08-who-gets-to-change-the-promise.png)](08-who-gets-to-change-the-promise.png)
 
-The stories are simple, but the ideas are not fake. They introduce:
+[![9. A softer world](09-a-softer-world.png)](09-a-softer-world.png)
 
-- degrees instead of only yes or no;
-- observer-relative distinction;
-- resolution and symbolic smoothness;
-- first and second differences;
-- boundary accounting;
-- identity and information loss across forks and merges.
+---
 
-The notation stays optional. Every symbol must first earn its meaning in a story.
-
-### About
-
-Created by **Paul Carver Tiffany III**.
-
-Licensed under the [MIT License](LICENSE).
-
+Created by **Paul Carver Tiffany III**. [MIT licensed](LICENSE).
