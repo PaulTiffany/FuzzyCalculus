@@ -26,6 +26,30 @@ Grown-ups with a fork: enable **Issues** in your repository’s **Settings → G
 
 Young children participate through a grown-up. Please never post a child's personal information.
 
+<details markdown="1">
+<summary>🐻 Big Bear Notes — for curious grown-ups</summary>
+
+The original storyboard brings the whole adventure together, including a little map from the story to its mathematical ideas. Click the image to read it at full size.
+
+[![Original Sugar Bear storyboard: a cover, nine illustrated story pages, and a Big Bear Notes panel connecting the questions to mathematical ideas. The notes are also transcribed in the table below.](storyboard.png)](storyboard.png)
+
+| Story question | Big Bear connection |
+| --- | --- |
+| How much? | Fuzzy sets |
+| Can you see it? | Observer & resolution |
+| What changed? | Derivative (change) |
+| Did the changing change? | Second derivative |
+| Does it look smooth? | Smoothness & scale |
+| What happened in between? | Paths & integration |
+| Is it still the same bear? | Invariance |
+| Who gets to change the promise? | Boundary conditions & real-world choices |
+
+Same ideas. Kinder story.
+
+The storyboard shares the book’s [CC BY 4.0 license](LICENSE).
+
+</details>
+
 ---
 
 *Sugar Bear's Book of Fuzzy Things* © 2026 **Paul Carver Tiffany III**. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
